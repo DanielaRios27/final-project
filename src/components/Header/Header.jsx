@@ -8,7 +8,6 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  console.log(isOpen);
   return (
     <header>
       <div className="logo">
