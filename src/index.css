@@ -58,7 +58,7 @@ button:focus-visible {
 
 * {
 	scrollbar-width: 10px;
-	scrollbar-color: var(--bg-container-color) transparent;
+	scrollbar-color: var(--bg-color) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -66,10 +66,10 @@ button:focus-visible {
 }
 
 *::-webkit-scrollbar-track {
-	background: transparent;
+	background: var(--bg-container-color);
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: var(--bg-container-color);
+	background-color: var(--bg-color);
 	border-radius: 1em;
 }

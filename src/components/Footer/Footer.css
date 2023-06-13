@@ -1,0 +1,74 @@
+.btn {
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 1em;
+  padding: 1em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  box-shadow: 1px 1px 10px 2px var(--bg-container-color);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: all 0.5s ease-in-out;
+  min-width: 120px;
+}
+
+.btn--open {
+  background-color: tomato;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.metricas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: -100vw;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.106);
+  backdrop-filter: blur(2em);
+  box-shadow: -6px 1px 100px 2px var(--bg-container-color);
+  list-style: none;
+  z-index: 0;
+  padding: 1em;
+  gap: 2em;
+  transition: all 0.5s ease-in-out;
+  max-width: 300px;
+}
+
+.metricas--open {
+  right: 0;
+}
+
+.metrica {
+  background-color: var(--bg-container-color);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  width: 100%;
+  box-shadow: 1px 1px 10px 2px var(--bg-container-color);
+  border: 1px solid var(--main-color);
+}
+
+.metrica span {
+  font-weight: 700;
+}
