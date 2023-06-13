@@ -84,6 +84,7 @@ header {
 
   .nav__list--close {
     right: -100vw;
+    display: none;
   }
 
   .nav__item {

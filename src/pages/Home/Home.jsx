@@ -2,6 +2,7 @@ import products from "../../mocks/products.json";
 import { useFilters } from "../../hooks/useFilters";
 import { Products } from "../../components/Products/Products";
 import "./Home.css";
+import { Filters } from "../../components/Filters/Filters";
 
 export const Home = () => {
   const { filterProducts } = useFilters();
@@ -10,7 +11,10 @@ export const Home = () => {
   console.log(filteredProducts);
   return (
     <main>
-      <Products products={filteredProducts} />
+      <Filters />
+      <section>
+        <Products products={filteredProducts} />
+      </section>
     </main>
   );
 };
