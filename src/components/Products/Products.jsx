@@ -10,7 +10,8 @@ export function Products({ products }) {
             <li key={product.id}>
               <img src={product.image} alt={product.title} />
               <div>
-                <strong>{product.title}</strong> - ${product.price}
+                <strong>{product.title}</strong> -{" "}
+                <span className="products__price">${product.price}</span>
               </div>
               <div>
                 <p>{product.description}</p>

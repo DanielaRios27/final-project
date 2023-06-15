@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "./Footer.css";
+import { BestProduct } from "../BestProduct/BestProduct";
+import { TotalProducts } from "../TotalProducts/TotalProducts";
+import { TotalCarts } from "../TotalCarts/TotalCarts";
+import { AveragePrice } from "../AveragePrice/AveragePrice";
+import { TotalRevenue } from "../TotalRevenue/TotalRevenue";
 
 export const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,23 +17,23 @@ export const Footer = () => {
         <ul className={`metricas ${isOpen ? "metricas--open" : ""}`}>
           <li className="metrica">
             <span>Total de productos: </span>
-            <span>20</span>
+            <TotalProducts />
           </li>
           <li className="metrica">
             <span>Total de pedidos: </span>
-            <span>20</span>
+            <TotalCarts />
           </li>
           <li className="metrica">
             <span>Precio promedio: </span>
-            <span>$185</span>
+            <AveragePrice />
           </li>
           <li className="metrica">
             <span>Ingresos totales: </span>
-            <span>$2067</span>
+            <TotalRevenue />
           </li>
           <li className="metrica">
             <span>Producto más vendido: </span>
-            <span>Chaqueta full hd</span>
+            <BestProduct />
           </li>
         </ul>
       </aside>
