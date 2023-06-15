@@ -23,10 +23,16 @@ export const Header = () => {
           }`}
         >
           <li className="nav__item" onClick={toggleMenu}>
-            <Link to="productos">Productos</Link>
+            <Link to="/">Productos</Link>
           </li>
           <li className="nav__item" onClick={toggleMenu}>
-            <Link to="pedidos">Pedidos</Link>
+            <a
+              href="https://github.com/DanielaRios27/final-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repositorio
+            </a>
           </li>
         </ul>
         <div className="nav__menu" onClick={toggleMenu}>
