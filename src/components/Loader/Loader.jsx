@@ -2,7 +2,7 @@ import "./Loader.css";
 
 export const Loader = () => {
   return (
-    <>
+    <div className="loader-container">
       <div
         aria-label="Orange and tan hamster running in a metal wheel"
         role="img"
@@ -26,6 +26,6 @@ export const Loader = () => {
         <div className="spoke"></div>
       </div>
       <h2>Cargando...</h2>
-    </>
+    </div>
   );
 };
