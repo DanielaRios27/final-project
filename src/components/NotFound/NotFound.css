@@ -1,0 +1,30 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+.btn--back {
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--main-color);
+  color: var(--font-color);
+}
+
+.btn--back:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.btn--back a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1em;
+}
