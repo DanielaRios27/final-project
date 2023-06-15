@@ -1,20 +1,29 @@
-import products from "../../mocks/products.json";
 import { useFilters } from "../../hooks/useFilters";
 import { Products } from "../../components/Products/Products";
-import "./Home.css";
 import { Filters } from "../../components/Filters/Filters";
+import { ProductsContext } from "../../context/products";
+import { useContext } from "react";
+import "./Home.css";
+import { Loader } from "../../components/Loader/Loader";
 
 export const Home = () => {
+  const { products, error, loading } = useContext(ProductsContext);
   const { filterProducts } = useFilters();
-  console.log(filterProducts);
   const filteredProducts = filterProducts(products);
-  console.log(filteredProducts);
   return (
     <main>
-      <Filters />
-      <section>
-        <Products products={filteredProducts} />
-      </section>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        error
+      ) : (
+        <>
+          <Filters />
+          <section>
+            <Products products={filteredProducts} />
+          </section>
+        </>
+      )}
     </main>
   );
 };
